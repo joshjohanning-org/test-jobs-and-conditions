@@ -70,12 +70,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: exit 1
+        run: "echo success"
         
-  email:
+  email-on-failure:
     runs-on: ubuntu-latest
     needs: [deploydev, deployprd1, deployprd2]
-    if: always()
+    if: failure()
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
