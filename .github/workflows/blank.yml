@@ -70,7 +70,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: "echo success"
+        run: exit 1
         
   email-on-failure:
     runs-on: ubuntu-latest
